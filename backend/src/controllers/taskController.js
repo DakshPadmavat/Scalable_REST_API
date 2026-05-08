@@ -1,13 +1,25 @@
 const prisma = require("../config/db");
 
-exports.getTasks = async (req, res) => {
-    const tasks = await prisma.task.findMany({
-        where: {
-            userId: req.user.id,
-        },
-    });
+exports.getTasks = async (
+    req,
+    res
+) => {
+    try {
+        const tasks =
+            await prisma.task.findMany({
+                where: {
+                    userId: req.user.id,
+                },
+            });
 
-    res.json(tasks);
+        res.json(tasks);
+    } catch (error) {
+        console.log(error);
+
+        res.status(500).json({
+            message: error.message,
+        });
+    }
 };
 
 exports.createTask = async (req, res) => {
