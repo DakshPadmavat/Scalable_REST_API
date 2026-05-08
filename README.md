@@ -56,8 +56,8 @@ A full-stack task management application built with Node.js, Express, Prisma, an
 ### Backend (`backend/.env`)
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `DATABASE_URL` | PostgreSQL connection string | `postgresql://user:pass@localhost:5432/db` |
-| `JWT_SECRET` | Secret key for JWT signing | `your_secret_key` |
+| `DATABASE_URL` | PostgreSQL connection string | `postgresql://neondb_owner:npg_AHohLOm3Y2Rk@ep-holy-bar-apf4loop.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require` |
+| `JWT_SECRET` | Secret key for JWT signing | `supersecret123` |
 | `PORT` | Backend server port | `5000` |
 
 ## API Routes
@@ -69,16 +69,16 @@ A full-stack task management application built with Node.js, Express, Prisma, an
 ### Tasks (`/api/v1/tasks`)
 - `GET /`: Retrieve all tasks for the logged-in user
 - `POST /`: Create a new task
-- `PUT /:id`: Update an existing task
 - `DELETE /:id`: Delete a task
 
 ### Documentation
-- Swagger UI: `http://localhost:5000/api-docs`
+- Postman: Inside postman folder [Tasks.postman_collection.json]
+- Swagger UI: `https://scalable-rest-api.onrender.com/api-docs`
 
 ## Deployment Links
-- **Frontend:** [Link to Frontend]
-- **Backend API:** [Link to Backend API]
-- **API Documentation:** [Link to API Docs]
+- **Frontend:** [https://scrapi-delta.vercel.app]
+- **Backend API:** [https://scalable-rest-api.onrender.com/api/v1]
+- **API Documentation:** [https://scalable-rest-api.onrender.com/api-docs]
 
 ---
 For details on how this project can be scaled, see [SCALABILITY.md](./SCALABILITY.md).
